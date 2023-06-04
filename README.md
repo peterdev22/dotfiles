@@ -1,6 +1,6 @@
 # My .files
-This repository is supposed to be a backup of my (most important) configuration files just in case my computer dies. Anyone is free to use these for themselves as this is a public repo.
-I recommened you take inspiration from these but i'll be impressed if you can use these for yourself as config files are a very personal thing. (The Firefox theme is pretty cool though so you can definitely try using that!)
+This repository is supposed to be a backup of my (most important) configuration files just in case my computer dies.
+Feel free to take inspiration from these and modify them to your liking - I've made them easy to edit.
 
 ### Outline
 - **Theming**
@@ -15,7 +15,7 @@ I recommened you take inspiration from these but i'll be impressed if you can us
 
 #### userChrome.css
 This Firefox configuration converts the top tab and address bar into one so theres more space for the webpage.
-- Removing as many buttons as possible from your toolbar makes it look a lot better
+- Looks better if you remove your toolbar items
 - Does not work on Windows
 
 ![userChrome_example](https://github.com/peterdev22/dotfiles/assets/95014170/d5f40ce4-a541-4c23-90e8-8a330ddaa21a)
