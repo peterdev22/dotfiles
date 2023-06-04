@@ -1,0 +1,57 @@
+# yabai
+# Tiled window management
+
+# Layout
+LAYOUT_CONFIG=(
+  layout bsp # Binary Space Partitioning
+  window_placement second_child # New window spawns to the right if vertical split, or bottom if horizontal split
+)
+yabai -m config "${LAYOUT_CONFIG[@]}" # Apply layout
+
+# Mouse Support
+MOUSE_CONFIG=(
+  mouse_drop_action swap
+  # config mouse_follows_focus on
+)
+yabai -m config "${MOUSE_CONFIG[@]}" # Apply mouse support
+
+# Padding
+PADDING_CONFIG=(
+  top_padding 12
+  bottom_padding 12
+  left_padding 12
+  right_padding 12
+  window_gap 12
+)
+yabai -m config "${PADDING_CONFIG[@]}" # Apply padding
+
+# Bordering
+BORDER_CONFIG=(
+  window_border off
+  
+  normal_window_border_color 0xFF2A2C49
+  active_window_border_color 0xFF89b4fa
+  window_border_width 3
+  window_border_radius 12
+  window_border_hidpi on
+  window_border_blur on
+)
+yabai -m config "${BORDER_CONFIG[@]}" # Apply bordering
+
+# App Exceptions
+UNMANAGED=(
+  System Settings
+  Calculator
+  Raycast
+  Shottr
+  Stats
+  Calculator
+  Installer
+  Archive Utility
+  Bitwarden
+  Finder
+)
+for ((i = 1; i <= "${#UNMANAGED[@]}"; i++)); do
+	yabai -m rule --add app="^${UNMANAGED[(($i - 1))]}.*$" manage=off
+done
+

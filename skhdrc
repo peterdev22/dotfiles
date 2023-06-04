@@ -1,0 +1,31 @@
+# skhd
+# Terminal commands that can be activiated via keyboard shortcuts
+
+# ----------- Yabai Window Management -----------
+
+# Window Movement
+ctrl + alt + cmd - down : yabai -m window --swap south # Swap down
+ctrl + alt + cmd - up : yabai -m window --swap north # Swap up
+ctrl + alt + cmd - left : yabai -m window --swap west # Swap left
+ctrl + alt + cmd - right : yabai -m window --swap east # Swap right
+
+ctrl + alt + cmd - j : yabai -m window --warp south # Cut down
+ctrl + alt + cmd - k : yabai -m window --warp north # Cut down
+ctrl + alt + cmd - h : yabai -m window --warp west # Cut down
+ctrl + alt + cmd - l : yabai -m window --warp east # Cut down
+
+ctrl + alt + cmd + shift - left : yabai -m window --display west; yabai -m display --focus west; # Move to left display
+ctrl + alt + cmd + shift - right : yabai -m window --display east; yabai -m display --focus east; # Move to right display
+
+# Window Misc.
+ctrl + alt + cmd - f : yabai -m window --toggle zoom-fullscreen # Toggle fullscreen
+ctrl + alt + cmd - t : yabai -m window --toggle float --grid 4:4:1:1:2:2 # Detach window
+ctrl + alt + cmd - e : yabai -m space --balance # Balence split windows
+
+# Focus Movement
+ctrl + alt + cmd - s : yabai -m window --focus south # Focus down
+ctrl + alt + cmd - w : yabai -m window --focus north # Focus up
+ctrl + alt + cmd - a : yabai -m window --focus west # Focus left
+ctrl + alt + cmd - d : yabai -m window --focus east # Focus right
+
+# ----------- End Yabai Window Management -----------
