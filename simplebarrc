@@ -1,0 +1,160 @@
+{
+  "global": {
+    "theme": "dark",
+    "floatingBar": true,
+    "noBarBg": true,
+    "noColorInData": true,
+    "bottomBar": false,
+    "inlineSpacesOptions": false,
+    "disableNotifications": true,
+    "compactMode": true,
+    "widgetMaxWidth": "220px",
+    "spacesBackgroundColorAsForeground": false,
+    "widgetsBackgroundColorAsForeground": false,
+    "font": "JetBrains Mono Bold",
+    "fontSize": "12px",
+    "yabaiPath": "/usr/local/bin/yabai",
+    "shell": "sh",
+    "slidingAnimationPace": "4",
+    "externalConfigFile": true
+  },
+  "themes": {
+    "lightTheme": "MacOSLight",
+    "darkTheme": "PeterBlue"
+  },
+  "process": {
+    "displayOnlyCurrent": false,
+    "centered": true,
+    "showCurrentSpaceMode": false,
+    "hideWindowTitle": false,
+    "displayOnlyIcon": false
+  },
+  "spacesDisplay": {
+    "exclusions": "Bitwarden",
+    "titleExclusions": "",
+    "spacesExclusions": "",
+    "exclusionsAsRegex": false,
+    "displayAllSpacesOnAllScreens": false,
+    "hideDuplicateAppsInSpaces": false,
+    "displayStickyWindowsSeparately": true,
+    "hideEmptySpaces": false,
+    "showOptionsOnHover": true,
+    "switchSpacesWithoutYabai": true
+  },
+  "widgets": {
+    "processWidget": true,
+    "weatherWidget": false,
+    "batteryWidget": true,
+    "wifiWidget": false,
+    "vpnWidget": false,
+    "zoomWidget": false,
+    "soundWidget": true,
+    "micWidget": false,
+    "dateWidget": true,
+    "timeWidget": true,
+    "keyboardWidget": false,
+    "spotifyWidget": false,
+    "cryptoWidget": false,
+    "stockWidget": false,
+    "musicWidget": false,
+    "mpdWidget": false,
+    "dndWidget": false,
+    "browserTrackWidget": false
+  },
+  "weatherWidgetOptions": {
+    "refreshFrequency": 1800000,
+    "unit": "C",
+    "hideLocation": false,
+    "hideGradient": false,
+    "customLocation": ""
+  },
+  "batteryWidgetOptions": {
+    "refreshFrequency": 10000,
+    "toggleCaffeinateOnClick": true,
+    "caffeinateOption": ""
+  },
+  "networkWidgetOptions": {
+    "refreshFrequency": 20000,
+    "networkDevice": "en0",
+    "hideWifiIfDisabled": false,
+    "toggleWifiOnClick": true,
+    "hideNetworkName": true
+  },
+  "vpnWidgetOptions": {
+    "refreshFrequency": 8000,
+    "vpnConnectionName": "",
+    "vpnShowConnectionName": false
+  },
+  "zoomWidgetOptions": {
+    "refreshFrequency": 5000,
+    "showVideo": true,
+    "showMic": true
+  },
+  "soundWidgetOptions": {
+    "refreshFrequency": 20000
+  },
+  "micWidgetOptions": {
+    "refreshFrequency": 20000
+  },
+  "dateWidgetOptions": {
+    "refreshFrequency": 30000,
+    "shortDateFormat": true,
+    "locale": "en-UK",
+    "calendarApp": ""
+  },
+  "timeWidgetOptions": {
+    "refreshFrequency": 1000,
+    "hour12": true,
+    "dayProgress": false,
+    "showSeconds": false
+  },
+  "keyboardWidgetOptions": {
+    "refreshFrequency": 20000
+  },
+  "cryptoWidgetOptions": {
+    "refreshFrequency": 300000,
+    "denomination": "usd",
+    "identifiers": "bitcoin,ethereum,celo",
+    "precision": 5
+  },
+  "stockWidgetOptions": {
+    "refreshFrequency": 900000,
+    "yahooFinanceApiKey": "YOUR_API_KEY",
+    "symbols": "AAPL,TSLA",
+    "showSymbol": true,
+    "showCurrency": true,
+    "showMarketPrice": true,
+    "showMarketChange": false,
+    "showMarketPercent": true,
+    "showColor": true
+  },
+  "spotifyWidgetOptions": {
+    "refreshFrequency": 10000,
+    "showSpecter": true
+  },
+  "musicWidgetOptions": {
+    "refreshFrequency": 10000,
+    "showSpecter": true
+  },
+  "mpdWidgetOptions": {
+    "refreshFrequency": 10000,
+    "showSpecter": true,
+    "mpdPort": "6600",
+    "mpdHost": "127.0.0.1",
+    "mpdFormatString": "%title%[ - %artist%]|[%file%]"
+  },
+  "dndWidgetOptions": {
+    "refreshFrequency": 60000,
+    "showDndLabel": false
+  },
+  "browserTrackWidgetOptions": {
+    "refreshFrequency": 10000,
+    "showSpecter": true
+  },
+  "userWidgets": {
+    "userWidgetsList": {}
+  },
+  "customStyles": {
+    "styles": ".simple-bar {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  z-index: 0;\n  height: var(--bar-height);\n  display: flex;\n  align-items: stretch;\n  padding: var(--bar-inner-margin);\n  box-sizing: border-box;\n  color: var(--foreground);\n  font-size: var(--font-size);\n  font-family: var(--font);\n  background-color: var(--background);\n  box-shadow: var(--light-shadow);\n}\n.simple-bar--floating {\n  top: 6px;\n}\n.simple-bar--no-bar-background {\n  padding: 0;\n}\n.simple-bar--on-bottom {\n  top: unset;\n  bottom: 0;\n}\n.simple-bar--floating.simple-bar--on-bottom {\n  bottom: 6px;\n}\n.simple-bar--floating {\n  left: 12px;\n  width: calc(100% - 24px);\n  border-radius: var(--bar-radius);\n}\n.simple-bar--no-bar-background,\n.simple-bar--no-shadow {\n  box-shadow: none;\n}\n.simple-bar--focused,\n.simple-bar--no-shadow.simple-bar--focused {\n  box-shadow: inset 0 0 0 1px var(--cyan);\n}\n.simple-bar--no-bar-background {\n  background-color: transparent;\n}\n.simple-bar--no-color-in-data {\n  color: var(--white);\n}\n.simple-bar--empty {\n  height: var(--bar-height);\n  display: flex;\n  align-items: center;\n}\n.simple-bar--empty {\n  z-index: 2;\n}\n.simple-bar--empty > span {\n  position: relative;\n  display: flex;\n  align-items: center;\n  color: var(--foreground);\n}\n.simple-bar--empty > span::before {\n  content: \"\";\n  width: 6px;\n  height: 6px;\n  margin-right: 7px;\n  background-color: var(--red);\n  border-radius: 50%;\n}\n.simple-bar--empty.simple-bar--loading > span::before {\n  background-color: var(--green);\n}\n.simple-bar__data {\n  display: flex;\n  align-items: stretch;\n  margin-left: auto;\n}\n#simple-bar-click-effect {\n  position: absolute;\n  border-radius: 50%;\n  pointer-events: none;\n  touch-action: none;\n  background-color: var(--click-effect);\n  z-index: 2147483647;\n}"
+  }
+}
