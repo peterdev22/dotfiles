@@ -1,17 +1,26 @@
-/* My userChrome.css config for Firefox */
-/* Note : Only works on MacOS */
+/* My userChrome.css config for Firefox
 
-/* remove addon icon in the url bar */
-.urlbar-addon-page-action {
-  display: none;
-}
+It's recommended to copy the entire file and edit it from there as 
+basically everthing here makes the UI look better.
 
-/* change font of all ui */
+Comments are provided for each section to help you understand what
+everything generally does.
+
+Compatibility :
+- Works on MacOS
+- Doesn't work on Windows (Close buttons are on the right instead of left - you could edit this to make it work.)
+- Untested on Linux systems
+
+*/
+
+
+/* ------------ UI looks ------------ */
+/* Change UI Font */
 * {
   font-family: 'SF Pro Rounded';
 }
 
-/* tab stuff */
+/* Tab Styles */
 .tabbrowser-tab .tab-stack {
   font-size: 12px;
   font-weight: 600 !important;
@@ -30,15 +39,95 @@
   border-radius: var(--user-tab-rounding) !important;
 }
 
-/* url bar stuff */
+/* URL Bar Styles */
 #urlbar-background,#urlbar {
   border-radius: 8px !important;
 }
 
-/* one line tab and url bar */
+/* Download Button Styles */
+.toolbarbutton-1 {
+  fill: #BBC3E0 !important;
+}
+
+/* Container Tab Indicator */
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
+  width: 5px !important;
+  height: 5px !important;
+  transform: translate(-1px, 4px) !important;
+  opacity: 0.8 !important;
+}
+
+/* Arc 'like' border around browser window (Disabled, but works if you want to use it.) */
+/*
+#appcontent > #tabbrowser-tabbox > #tabbrowser-tabpanels > .deck-selected > .browserContainer > .browserStack > browser {
+	border-radius: 8px !important;
+	margin-bottom: 12px !important;
+	margin-left: 12px !important;
+	margin-right: 12px !important;
+}
+*/
+
+/* ------------ Unified URL and Tab bar ------------ */
+/* Main Changes */
 .titlebar-buttonbox {
   transform: translate(-37.5vw, 0px) !important;
 }
+#navigator-toolbox {
+  border: 0px !important;
+}
+#TabsToolbar {
+  margin-left: 38vw !important;
+}
+#nav-bar {
+  background: transparent !important;
+  margin-top: -50px !important;
+  margin-right: 60vw !important;
+  margin-left: 5vw !important;
+  padding-bottom: 10px;
+}
+#urlbar-container {
+  min-width: 300px !important;
+}
+#urlbar {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.titlebar-spacer {
+  display: none !important;
+}
+
+/* Moving Buttons */
+.unified-extensions-item {
+  padding-top: 10px;
+}
+#downloads-button {
+  margin-right: 10px !important;
+}
+
+/* Removing Buttons */
+#unified-extensions-button, #unified-extensions-button > .toolbarbutton-icon {
+  width: 0px !important;
+  padding: 0px !important;
+}
+#page-action-buttons {
+  display: none !important;
+}
+#PanelUI-button {
+  display: none !important;
+}
+#back-button {
+  display: none !important;
+}
+#forward-button {
+  display: none !important;
+}
+#tracking-protection-icon-container {
+  display: none !important;
+}
+
+
+/* ------------ Making it Somewhat Responsive ------------ */
 @media screen and (max-width: 1400px) {
   box#identity-icon-box.identity-box-button {
     display: none !important;
@@ -62,97 +151,4 @@
   hbox#urlbar {
     transform: translate(45px, 0px) !important;
   }
-}
-
-.titlebar-spacer {
-  display: none !important;
-}
-#navigator-toolbox {
-  border: 0px !important;
-}
-#TabsToolbar {
-  margin-left: 38vw !important;
-}
-#nav-bar {
-  background: transparent !important;
-  margin-top: -50px !important;
-  margin-right: 60vw !important;
-  margin-left: 5vw !important;
-  padding-bottom: 10px;
-}
-#back-button {
-  display: none !important;
-}
-#forward-button {
-  display: none !important;
-}
-#tracking-protection-icon-container {
-  display: none !important;
-}
-#urlbar-container {
-  min-width: 300px !important;
-}
-#urlbar {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-#page-action-buttons {
-  display: none !important;
-}
-#PanelUI-button {
-  display: none !important;
-}
-.unified-extensions-item {
-  padding-top: 10px;
-}
-
-/* remove extention button */
-#unified-extensions-button, #unified-extensions-button > .toolbarbutton-icon {
-  width: 0px !important;
-  padding: 0px !important;
-}
-
-/* hide account email in ui */
-#appMenu-fxa-label2 #appMenu-header-description {
-	display: none !important;
-}
-
-#appMenu-popup #appMenu-fxa-label2::before {
-	content: 'Firefox account' !important;
-}
-
-/* add border to the whole window */
-/*
-#appcontent
-  > #tabbrowser-tabbox
-  > #tabbrowser-tabpanels
-  > .deck-selected
-  > .browserContainer
-  > .browserStack
-  > browser {
-  border-radius: 8px !important;
-  margin-bottom: 12px !important;
-  margin-left: 12px !important;
-  margin-right: 12px !important;
-}
-*/
-
-
-/* add margin to dl button */
-#downloads-button {
-  margin-right: 10px !important;
-}
-
-/* modify container tab indicator */
-.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
-  width: 5px !important;
-  height: 5px !important;
-  transform: translate(-1px, 4px) !important;
-  opacity: 0.8 !important;
-}
-
-/* downloads button colour */
-.toolbarbutton-1 {
-  fill: #BBC3E0 !important;
 }
