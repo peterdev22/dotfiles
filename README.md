@@ -5,6 +5,7 @@ Feel free to take inspiration from these and modify them to your liking - I've m
 ### Outline
 - **Theming**
   - userChrome
+  - simplebarrc
 - **Window Management**
   - yabairc
   - skhdrc
@@ -19,6 +20,23 @@ This Firefox configuration converts the top tab and address bar into one so ther
 - Does not work on Windows
 
 ![userChrome_example](https://github.com/peterdev22/dotfiles/assets/95014170/d5f40ce4-a541-4c23-90e8-8a330ddaa21a)
+
+&nbsp;
+
+#### simplebarrc
+[simple-bar](https://github.com/Jean-Tinland/simple-bar) is a menu bar replacement that uses [Übersicht](https://github.com/felixhageloh/uebersicht). I've included a config file which you can put into your `~/.simplebarrc`. You can then get it into simple-bar by enabling the 'External config file' setting - a import button will appear and you can use that to import the config.
+
+**NOTE: Things will look weird before you add the custom theme.**
+
+To import the custom theme, go to `/lib/styles/themes` and add the `simplebartheme.js` file to the folder. Make sure to reference it in the `themes.js` file! (Code below)
+
+_Line 23 ->_ ```import * as PeterBlue from "./themes/simplebartheme.js";```
+
+_Line 48 ->_ ```PeterBlue: PeterBlue.theme``` 
+
+Now go to the themes tab in setting and select 'Peter Blue', and you're done!
+
+![simplebar_example](https://github.com/peterdev22/dotfiles/assets/95014170/7024fb3a-35c4-46c7-881e-54c53e1d5720)
 
 &nbsp;
 
