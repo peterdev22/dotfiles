@@ -23,9 +23,9 @@ ctrl + alt + cmd - t : yabai -m window --toggle float --grid 4:4:1:1:2:2 # Detac
 ctrl + alt + cmd - e : yabai -m space --balance # Balence split windows
 
 # Focus Movement
-ctrl + alt + cmd - s : yabai -m window --focus south # Focus down
-ctrl + alt + cmd - w : yabai -m window --focus north # Focus up
+ctrl + alt + cmd - w : yabai -m window --focus south # Focus down
+ctrl + alt + cmd - q : yabai -m window --focus north # Focus up
 ctrl + alt + cmd - a : yabai -m window --focus west # Focus left
-ctrl + alt + cmd - d : yabai -m window --focus east # Focus right
+ctrl + alt + cmd - s : yabai -m window --focus east # Focus right
 
 # ----------- End Yabai Window Management -----------

@@ -8,6 +8,14 @@ LAYOUT_CONFIG=(
 )
 yabai -m config "${LAYOUT_CONFIG[@]}" # Apply layout
 
+# Space Labels (for simplebar)
+yabai -m space 1 --label "Music"
+yabai -m space 2 --label "Web"
+yabai -m space 3 --label "Productivity"
+yabai -m space 4 --label "Dev"
+yabai -m space 5 --label "Notes"
+yabai -m space 6 --label "Social"
+
 # Mouse Support
 MOUSE_CONFIG=(
   mouse_drop_action swap
@@ -17,11 +25,13 @@ yabai -m config "${MOUSE_CONFIG[@]}" # Apply mouse support
 
 # Padding
 PADDING_CONFIG=(
-  top_padding 12
+  top_padding 8
   bottom_padding 12
   left_padding 12
   right_padding 12
   window_gap 12
+  
+  external_bar all:34:0
 )
 yabai -m config "${PADDING_CONFIG[@]}" # Apply padding
 
@@ -34,7 +44,7 @@ BORDER_CONFIG=(
   window_border_width 3
   window_border_radius 12
   window_border_hidpi on
-  window_border_blur on
+  window_border_blur off
 )
 yabai -m config "${BORDER_CONFIG[@]}" # Apply bordering
 
@@ -44,14 +54,17 @@ UNMANAGED=(
   Calculator
   Raycast
   Shottr
-  Stats
   Calculator
   Installer
   Archive Utility
   Bitwarden
   Finder
+  Simulator
 )
 for ((i = 1; i <= "${#UNMANAGED[@]}"; i++)); do
 	yabai -m rule --add app="^${UNMANAGED[(($i - 1))]}.*$" manage=off
 done
 
+# Misc. Exceptions
+yabai -m rule --add app="^Calendar$" title="(General|^$)" manage=off
+yabai -m rule --add title="^New Message" manage=off

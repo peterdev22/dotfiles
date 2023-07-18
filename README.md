@@ -58,4 +58,4 @@ This file uses the hyper key (`ctrl + alt + cmd`) for moving windows around. Use
 - `t` to toggle tile for a window
 - `e` to balence tiled windows
 - `f` for fullscreen
-- `s, w, a, d` for switching focus
+- `s, z, a, d` for switching focus
