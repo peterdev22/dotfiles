@@ -26,22 +26,37 @@ Compatibility :
   font-weight: 600 !important;
   padding: 5px;
 }
+
 .tab-label-container[selected=true] {
   color: #9fc0f5;
 }
+
 #tabbrowser-tabs {
   --user-tab-rounding: 8px;
 }
-#TabsToolbar, #tabbrowser-tabs {
+
+#TabsToolbar,
+#tabbrowser-tabs {
   --tab-min-height: 32px !important;
 }
+
 .tab-background {
   border-radius: var(--user-tab-rounding) !important;
 }
 
 /* URL Bar Styles */
-#urlbar-background,#urlbar {
+#urlbar-background,
+#urlbar {
   border-radius: 8px !important;
+}
+
+#urlbar[focused="true"]>#urlbar-background,
+#searchbar:focus-within {
+  border-color: var(--lwt-toolbar-field-border-color, #ffffff00) !important;
+}
+
+:root {
+  --toolbar-field-focus-border-color: transparent !important;
 }
 
 /* Download Button Styles */
@@ -50,7 +65,7 @@ Compatibility :
 }
 
 /* Container Tab Indicator */
-.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
+.tabbrowser-tab[usercontextid]>.tab-stack>.tab-background>.tab-context-line {
   width: 5px !important;
   height: 5px !important;
   transform: translate(-1px, 4px) !important;
@@ -72,12 +87,15 @@ Compatibility :
 .titlebar-buttonbox {
   transform: translate(-37.5vw, 0px) !important;
 }
+
 #navigator-toolbox {
   border: 0px !important;
 }
+
 #TabsToolbar {
   margin-left: 38vw !important;
 }
+
 #nav-bar {
   background: transparent !important;
   margin-top: -50px !important;
@@ -85,14 +103,17 @@ Compatibility :
   margin-left: 5vw !important;
   padding-bottom: 10px;
 }
+
 #urlbar-container {
   min-width: 300px !important;
 }
+
 #urlbar {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
 }
+
 .titlebar-spacer {
   display: none !important;
 }
@@ -101,27 +122,34 @@ Compatibility :
 .unified-extensions-item {
   padding-top: 10px;
 }
+
 #downloads-button {
   margin-right: 10px !important;
 }
 
 /* Removing Buttons */
-#unified-extensions-button, #unified-extensions-button > .toolbarbutton-icon {
+#unified-extensions-button,
+#unified-extensions-button>.toolbarbutton-icon {
   width: 0px !important;
   padding: 0px !important;
 }
+
 #page-action-buttons {
   display: none !important;
 }
+
 #PanelUI-button {
   display: none !important;
 }
+
 #back-button {
   display: none !important;
 }
+
 #forward-button {
   display: none !important;
 }
+
 #tracking-protection-icon-container {
   display: none !important;
 }
@@ -132,21 +160,26 @@ Compatibility :
   box#identity-icon-box.identity-box-button {
     display: none !important;
   }
+
   hbox#urlbar {
     transform: translate(10px, 0px) !important;
   }
 }
+
 @media screen and (max-width: 1200px) {
   box#identity-permission-box.identity-box-button {
     display: none !important;
   }
+
   hbox#urlbar {
     transform: translate(20px, 0px) !important;
   }
+
   hbox#urlbar-input-container {
     margin-left: 4px;
   }
 }
+
 @media screen and (max-width: 1000px) {
   hbox#urlbar {
     transform: translate(45px, 0px) !important;
