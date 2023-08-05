@@ -1,4 +1,4 @@
-# My .files
+  # My .files
 This repository is supposed to be a backup of my (most important) configuration files just in case my computer dies.
 Feel free to take inspiration from these and modify them to your liking - I've made them easy to edit.
 
@@ -57,6 +57,6 @@ This file uses the hyper key (`ctrl + alt + cmd`) for moving windows around. Use
 - `j, k, h, l` for cutting windows around
 - `shift + left` or `right` for changing displays
 - `t` to toggle tile for a window
-- `e` to balence tiled windows
 - `f` for fullscreen
-- `s, z, a, d` for switching focus
+- `q, w, a, s` for switching focus
+- `z, x` for switching focus between displays

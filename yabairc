@@ -9,17 +9,30 @@ LAYOUT_CONFIG=(
 yabai -m config "${LAYOUT_CONFIG[@]}" # Apply layout
 
 # Space Labels (for simplebar)
-yabai -m space 1 --label "Music"
-yabai -m space 2 --label "Web"
-yabai -m space 3 --label "Productivity"
-yabai -m space 4 --label "Dev"
-yabai -m space 5 --label "Notes"
-yabai -m space 6 --label "Social"
+displayCount=`system_profiler SPDisplaysDataType | grep -c Resolution` # Check if multiple displays are connected
+
+if [[ ${displayCount} -gt 1 ]]
+then 
+  # If multiple displays are connected
+  yabai -m space 1 --label "Music"
+  yabai -m space 2 --label "Web"
+  yabai -m space 3 --label "Productivity"
+  yabai -m space 4 --label "Dev"
+  yabai -m space 5 --label "Notes"
+  yabai -m space 6 --label "Social"
+else 
+  # If only one display is connected
+  yabai -m space 1 --label "Music"
+  yabai -m space 2 --label "Web"
+  yabai -m space 3 --label "Productivity"
+  yabai -m space 4 --label "Notes"
+  yabai -m space 5 --label "Social"
+fi
 
 # Mouse Support
 MOUSE_CONFIG=(
   mouse_drop_action swap
-  # config mouse_follows_focus on
+  mouse_follows_focus on
 )
 yabai -m config "${MOUSE_CONFIG[@]}" # Apply mouse support
 
@@ -66,5 +79,5 @@ for ((i = 1; i <= "${#UNMANAGED[@]}"; i++)); do
 done
 
 # Misc. Exceptions
-yabai -m rule --add app="^Calendar$" title="(General|^$)" manage=off
-yabai -m rule --add title="^New Message" manage=off
+yabai -m rule --add app="^Calendar$" title="(General|^$)" manage=off # Calendar.app new event suggestion window
+yabai -m rule --add title="^New Message" manage=off # Mail.app new message window
