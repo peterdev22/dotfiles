@@ -50,7 +50,7 @@ I use [yabai](https://github.com/koekeishiya/yabai) for tiled window management 
 
 #### skhdrc
 [skhd](https://github.com/koekeishiya/skhd) is used in conjunction with yabai to allow the keyboard to control window positioning (you're probably going to want to control via kb).
-This file uses the hyper key (`ctrl + alt + cmd`) for moving windows around. Use the hyper key plus `shift` to move the window to another display and use `t` to toggle a tiled window, `e` to balence tiles, `f` for fullscreen.
+This file uses the hyper key (`ctrl + alt + cmd`) for moving windows around. Use the hyper key plus `shift` to move the window to another display and use `t` to toggle a tiled window, `f` for fullscreen.
 
 **The controls are `ctrl + alt + cmd` and...**
 - `arrows` for swappping windows around
