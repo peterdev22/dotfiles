@@ -60,3 +60,4 @@ This file uses the hyper key (`ctrl + alt + cmd`) for moving windows around. Use
 - `f` for fullscreen
 - `q, w, a, s` for switching focus
 - `z, x` for switching focus between displays
+- `c, z` for resizing windows left and right (horizontally)
