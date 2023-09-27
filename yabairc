@@ -32,7 +32,7 @@ fi
 # Mouse Support
 MOUSE_CONFIG=(
   mouse_drop_action swap
-  focus_follows_mouse autofocus
+  # focus_follows_mouse autofocus
   # mouse_follows_focus on
 )
 yabai -m config "${MOUSE_CONFIG[@]}" # Apply mouse support
