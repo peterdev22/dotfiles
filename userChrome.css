@@ -100,12 +100,14 @@ Compatibility :
   background: transparent !important;
   margin-top: -50px !important;
   margin-right: 60vw !important;
-  margin-left: 5vw !important;
+  margin-left: 4.6vw !important;
   padding-bottom: 10px;
 }
 
 #urlbar-container {
-  min-width: 300px !important;
+  margin-top: 1px !important;
+  margin-bottom: 2px !important;
+  min-height: 45px !important;
 }
 
 #urlbar {
@@ -119,10 +121,6 @@ Compatibility :
 }
 
 /* Moving Buttons */
-.unified-extensions-item {
-  padding-top: 10px;
-}
-
 #downloads-button {
   margin-right: 10px !important;
 }
@@ -154,25 +152,24 @@ Compatibility :
   display: none !important;
 }
 
-
 /* ------------ Making it Somewhat Responsive ------------ */
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1600px) {
   box#identity-icon-box.identity-box-button {
     display: none !important;
   }
 
-  hbox#urlbar {
-    transform: translate(10px, 0px) !important;
+  #nav-bar {
+    margin-left: 6vw !important;
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   box#identity-permission-box.identity-box-button {
     display: none !important;
   }
 
-  hbox#urlbar {
-    transform: translate(20px, 0px) !important;
+  #nav-bar {
+    margin-left: 6.5vw !important;
   }
 
   hbox#urlbar-input-container {
@@ -180,8 +177,20 @@ Compatibility :
   }
 }
 
+@media screen and (max-width: 1200px) {
+  #nav-bar {
+    margin-left: 7vw !important;
+  }
+}
+
 @media screen and (max-width: 1000px) {
-  hbox#urlbar {
-    transform: translate(45px, 0px) !important;
+  .titlebar-buttonbox {
+    visibility: hidden !important;
+  }
+  #nav-bar {
+    margin-left: 1vw !important;
+  }
+  #TabsToolbar {
+    margin-left: 33vw !important;
   }
 }
