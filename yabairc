@@ -8,32 +8,35 @@ LAYOUT_CONFIG=(
 )
 yabai -m config "${LAYOUT_CONFIG[@]}" # Apply layout
 
-# Space Labels (for simplebar)
-displayCount=`system_profiler SPDisplaysDataType | grep -c Resolution` # Check if multiple displays are connected
-
-if [[ ${displayCount} -gt 1 ]]
-then 
-  # If multiple displays are connected
-  yabai -m space 1 --label "Music"
-  yabai -m space 2 --label "Web"
-  yabai -m space 3 --label "Productivity"
-  yabai -m space 4 --label "Dev"
-  yabai -m space 5 --label "Notes"
-  yabai -m space 6 --label "Social"
-else 
-  # If only one display is connected
-  yabai -m space 1 --label "Music"
-  yabai -m space 2 --label "Web"
-  yabai -m space 3 --label "Productivity"
-  yabai -m space 4 --label "Notes"
-  yabai -m space 5 --label "Social"
-fi
+# Space Labels (uncomment if using simplebar)
+# displayCount=`system_profiler SPDisplaysDataType | grep -c Resolution` # Check if multiple displays are connected
+# if [[ ${displayCount} -gt 1 ]]
+# then 
+#   # If multiple displays are connected
+#   yabai -m space 1 --label "Music"
+#   yabai -m space 2 --label "Web"
+#   yabai -m space 3 --label "Productivity"
+#   yabai -m space 4 --label "Dev"
+#   yabai -m space 5 --label "Notes"
+#   yabai -m space 6 --label "Social"
+# else 
+#   # If only one display is connected
+#   yabai -m space 1 --label "Music"
+#   yabai -m space 2 --label "Web"
+#   yabai -m space 3 --label "Productivity"
+#   yabai -m space 4 --label "Notes"
+#   yabai -m space 5 --label "Social"
+# fi
 
 # Mouse Support
 MOUSE_CONFIG=(
   mouse_drop_action swap
   # focus_follows_mouse autofocus
   # mouse_follows_focus on
+
+  mouse_modifier ctrl
+  mouse_action1 move
+  mouse_action2 resize
 )
 yabai -m config "${MOUSE_CONFIG[@]}" # Apply mouse support
 
@@ -45,7 +48,7 @@ PADDING_CONFIG=(
   right_padding 12
   window_gap 12
   
-  external_bar all:34:0
+  # external_bar all:34:0
 )
 yabai -m config "${PADDING_CONFIG[@]}" # Apply padding
 
@@ -71,9 +74,11 @@ UNMANAGED=(
   Calculator
   Installer
   Archive Utility
+  System Information
   Bitwarden
   Finder
   Simulator
+  QuickTime Player
 )
 for ((i = 1; i <= "${#UNMANAGED[@]}"; i++)); do
 	yabai -m rule --add app="^${UNMANAGED[(($i - 1))]}.*$" manage=off
@@ -81,4 +86,10 @@ done
 
 # Misc. Exceptions
 yabai -m rule --add app="^Calendar$" title="(General|^$)" manage=off # Calendar.app new event suggestion window
-yabai -m rule --add title="^New Message" manage=off # Mail.app new message window
+yabai -m rule --add app="^Mail" title="^Re.*" manage=off # Mail.app reply window
+yabai -m rule --add app="^Mail" title="^New Message" manage=off # Mail.app new message window
+yabai -m rule --add app="^Microsoft Word" title="^Open new and recent files" manage=off # Microsoft Word new file window
+yabai -m rule --add app="^Microsoft PowerPoint" title="^Open new and recent files" manage=off # Microsoft Word new file window
+yabai -m rule --add app="^Microsoft Excel" title="^Open new and recent files" manage=off # Microsoft Word new file window
+yabai -m rule --add app="^Arc$" title="^Space.*$" manage=off # Arc Browser little arc windows unmanaged
+yabai -m rule --add app="^Arc$" title="^$" manage=off # Arc Browser little arc windows unmanaged

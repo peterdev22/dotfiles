@@ -18,7 +18,7 @@ Feel free to take inspiration from these and modify them to your liking - I've m
 This Firefox configuration converts the top tab and address bar into one so theres more space for the webpage.
 - Looks better if you remove your toolbar items
 - Does not work on Windows
-- The theme used is Catppuccin using Firefox Color: [Link](https://color.firefox.com/?theme=XQAAAAJMBAAAAAAAAABBqYhm849SCicxcUcPX38oKRicm6da8pFtMcajvXaAE3RJ0F_F447xQs-L1kFlGgDKq4IIvWciiy4upusW7OvXIRinrLrwLvjXB37kvhN5ElayHo02fx3o8RrDShIhRpNiQMOdww5V2sCMLAfedxuJLwbcnxN_YEJNRaPz1Sbba3ncrdPQRlNpXIjOuG8-o1VYRaO3ALyE6-1vBDLJKMLAZ1kzPFz1tUhLbRqjsSyEA7fKOhwdVMGn-UD5UdDWJxJeoy-TtBciJAP65dHx2ZOfkh5PEMwlyE0Z4Iu0gE79ZPRglMEBzBPwiLgWmfGdqDN1Cz-ra9DaCmBIwb-AQIz-wAqFZIwxSG8N45ZUveR9kAegDeCbJOMUMGpJ-0KpK95mKNu-2kwNMLv2qkKYy9uHbc2pXwPwj1t_74pdGTyX38hPuOKTW0RpjJAE7N6RfwSn66occ1JSRtaTTS1QZ5pO4mQeaYF2xURmUJ-M0vAlKhXSEhPYP8wPWocVzZdXQ23_ciHGxsrnJ9usa462mlDbUePUhdPUtJRYAuMbYlUTBDqLsFrXMkZIqVr_wEpBjA)
+- The theme used is Catppuccin using Firefox Color: [Link](https://color.firefox.com/?theme=XQAAAAJJBAAAAAAAAABBqYhm849SCicxcUcPX38oKRicm6da8pFtMcajvXaAE3RJ0F_F447xQs-L1kFlGgDKq4IIvWciiy4upusW7OvXIRinrLrwLvjXB37kvhN5ElayHo02fx3o8RrDShIhRpNiQMOdww5V2sCMLAfedxuJKgKfYC0MgwphhfNqnG95yk9dbmoYTESCyaIPra1KFX29L9nLE5glNIsTm6faWK-3xbCKWAqSjZFO_VM9Wj_BYadsw2D1O60ylxFuTgUzlM3hW73I74s39LWAtaQcBMFUkmt-_Jj0QeC05EQAu-gaTkZE97kimAaYQiVW5Sqt9_GtXx3o-lg1164JYHZ9a-E2aGDmOLV6jVF4tFX-FFsc1MvLSUqqD-tWd_EUfqKap7GtNqx7wBhQDRqJqxWbRGcqxWBco0ZLIbQmlH_hli2TlnusOmkBgg9I_Bkyh6JsdNGHnTDgxnRr2lmwXKgr31f1qGwK9bRTJXmvTZFAayMxCSrkFMQmYNuz13yQbrWa610YWjML7YErRZua7-upk5E3uKlgt0bYUuQyuQrx-RpaGQQWpRM-sTZxPdipi-dzPXW2v_-3cxUg)
 
 ![userChrome_example](https://github.com/peterdev22/dotfiles/assets/95014170/d5f40ce4-a541-4c23-90e8-8a330ddaa21a)
 
@@ -60,4 +60,3 @@ This file uses the hyper key (`ctrl + alt + cmd`) for moving windows around. Use
 - `f` for fullscreen
 - `q, w, a, s` for switching focus
 - `z, x` for switching focus between displays
-- `c, z` for resizing windows left and right (horizontally)

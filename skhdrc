@@ -20,8 +20,6 @@ ctrl + alt + cmd + shift - right : yabai -m window --display east # Move to righ
 # Window Misc.
 ctrl + alt + cmd - f : yabai -m window --toggle zoom-fullscreen # Toggle fullscreen
 ctrl + alt + cmd - t : yabai -m window --toggle float --grid 4:4:1:1:2:2 # Detach window
-ctrl + alt + cmd - c : yabai -m window --resize left:-75:0 # Resize window left
-ctrl + alt + cmd - v : yabai -m window --resize left:75:0 # Resize window right
 
 # Focus Movement
 ctrl + alt + cmd - w : yabai -m window --focus south # Focus down
