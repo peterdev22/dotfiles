@@ -91,5 +91,5 @@ yabai -m rule --add app="^Mail" title="^New Message" manage=off # Mail.app new m
 yabai -m rule --add app="^Microsoft Word" title="^Open new and recent files" manage=off # Microsoft Word new file window
 yabai -m rule --add app="^Microsoft PowerPoint" title="^Open new and recent files" manage=off # Microsoft Word new file window
 yabai -m rule --add app="^Microsoft Excel" title="^Open new and recent files" manage=off # Microsoft Word new file window
-yabai -m rule --add app="^Arc$" title="^Space.*$" manage=off # Arc Browser little arc windows unmanaged
-yabai -m rule --add app="^Arc$" title="^$" manage=off # Arc Browser little arc windows unmanaged
+yabai -m rule --add app="^Arc$" title="^Space.*$" manage=off layer=below # Arc Browser (little arc windows unmanaged)
+yabai -m rule --add app="^Arc$" title="^$" manage=off layer=below # Arc Browser (little arc windows unmanaged)
