@@ -17,22 +17,19 @@ Compatibility :
 /* ------------ UI looks ------------ */
 /* Change UI Font */
 * {
-  font-family: 'SF Pro Rounded';
+  font-family: 'Mundial';
+  --content-area-shadow: 0 0 0 0 light-dark(rgba(0, 0, 0, .2), rgba(0, 0, 0, .8));
 }
 
 /* Tab Styles */
 .tabbrowser-tab .tab-stack {
   font-size: 12px;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
   padding: 5px;
 }
 
-.tab-label-container[selected=true] {
-  color: #9fc0f5;
-}
-
 #tabbrowser-tabs {
-  --user-tab-rounding: 8px;
+  --user-tab-rounding: 12px;
 }
 
 #TabsToolbar,
@@ -47,7 +44,7 @@ Compatibility :
 /* URL Bar Styles */
 #urlbar-background,
 #urlbar {
-  border-radius: 8px !important;
+  border-radius: 12px !important;
 }
 
 #urlbar[focused="true"]>#urlbar-background,
@@ -61,7 +58,7 @@ Compatibility :
 
 /* Download Button Styles */
 .toolbarbutton-1 {
-  fill: #BBC3E0 !important;
+  fill: #46CCFD !important;
 }
 
 /* Container Tab Indicator */
@@ -82,6 +79,11 @@ Compatibility :
 }
 */
 
+/* do not display x (close tab) button on tabs */
+.tabbrowser-tab .tab-close-button {
+  display: none;
+}
+
 /* ------------ Unified URL and Tab bar ------------ */
 /* Main Changes */
 .titlebar-buttonbox {
@@ -98,7 +100,7 @@ Compatibility :
 
 #nav-bar {
   background: transparent !important;
-  margin-top: -50px !important;
+  margin-top: -48px !important;
   margin-right: 60vw !important;
   margin-left: 4.6vw !important;
   padding-bottom: 10px;
@@ -187,9 +189,11 @@ Compatibility :
   .titlebar-buttonbox {
     visibility: hidden !important;
   }
+
   #nav-bar {
     margin-left: 1vw !important;
   }
+
   #TabsToolbar {
     margin-left: 33vw !important;
   }
