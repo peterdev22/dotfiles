@@ -69,21 +69,6 @@ Compatibility :
   background: #A6E3A1 !important;
 }
 
-/* Arc 'like' border around browser window (Disabled, but works if you want to use it.) */
-/*
-#appcontent > #tabbrowser-tabbox > #tabbrowser-tabpanels > .deck-selected > .browserContainer > .browserStack > browser {
-	border-radius: 8px !important;
-	margin-bottom: 12px !important;
-	margin-left: 12px !important;
-	margin-right: 12px !important;
-}
-*/
-
-/* do not display x (close tab) button on tabs */
-.tabbrowser-tab .tab-close-button {
-  display: none;
-}
-
 /* ------------ Unified URL and Tab bar ------------ */
 /* Main Changes */
 .titlebar-buttonbox {
