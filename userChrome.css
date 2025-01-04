@@ -72,7 +72,7 @@ Compatibility :
 /* ------------ Unified URL and Tab bar ------------ */
 /* Main Changes */
 .titlebar-buttonbox {
-  transform: translate(-37.5vw, 0px) !important;
+  transform: translate(-32.6vw, 0px) !important;
 }
 
 #navigator-toolbox {
@@ -80,13 +80,13 @@ Compatibility :
 }
 
 #TabsToolbar {
-  margin-left: 38vw !important;
+  margin-left: 33vw !important;
 }
 
 #nav-bar {
   background: transparent !important;
   margin-top: -48px !important;
-  margin-right: 60vw !important;
+  margin-right: 65vw !important;
   margin-left: 4.6vw !important;
   padding-bottom: 10px;
 }
