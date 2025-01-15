@@ -17,14 +17,14 @@ Compatibility :
 /* ------------ UI looks ------------ */
 /* Change UI Font */
 * {
-  font-family: 'Mundial';
+  font-family: 'SF Pro Display';
   --content-area-shadow: 0 0 0 0 light-dark(rgba(0, 0, 0, .2), rgba(0, 0, 0, .8));
 }
 
 /* Tab Styles */
 .tabbrowser-tab .tab-stack {
   font-size: 12px;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
   padding: 5px;
 }
 
