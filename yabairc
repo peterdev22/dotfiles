@@ -42,11 +42,11 @@ yabai -m config "${MOUSE_CONFIG[@]}" # Apply mouse support
 
 # Padding
 PADDING_CONFIG=(
-  top_padding 10
-  bottom_padding 10
-  left_padding 10
-  right_padding 10
-  window_gap 12
+  # top_padding 10
+  # bottom_padding 10
+  # left_padding 10
+  # right_padding 10
+  # window_gap 12
   
   # external_bar all:34:0
 )
