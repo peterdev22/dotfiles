@@ -42,10 +42,10 @@ yabai -m config "${MOUSE_CONFIG[@]}" # Apply mouse support
 
 # Padding
 PADDING_CONFIG=(
-  top_padding 8
-  bottom_padding 12
-  left_padding 12
-  right_padding 12
+  top_padding 10
+  bottom_padding 10
+  left_padding 10
+  right_padding 10
   window_gap 12
   
   # external_bar all:34:0
@@ -92,3 +92,8 @@ yabai -m rule --add app="^Microsoft Word" title="^Open new and recent files" man
 yabai -m rule --add app="^Microsoft PowerPoint" title="^Open new and recent files" manage=off # Microsoft Word new file window
 yabai -m rule --add app="^Microsoft Excel" title="^Open new and recent files" manage=off # Microsoft Word new file window
 yabai -m rule --add title=".*Bitwarden.*" manage=off # Any mention of Bitwarden, including extension window in Firefox
+
+# Ghostty workaround for tabbed windows
+# https://ghostty.org/docs/help/macos-tiling-wms
+yabai -m signal --add app='^Ghostty$' event=window_created action='yabai -m space --layout bsp'
+yabai -m signal --add app='^Ghostty$' event=window_destroyed action='yabai -m space --layout bsp'
