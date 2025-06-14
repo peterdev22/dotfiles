@@ -31,7 +31,7 @@ yabai -m config "${LAYOUT_CONFIG[@]}" # Apply layout
 # Mouse Support
 MOUSE_CONFIG=(
   mouse_drop_action swap
-  # focus_follows_mouse autofocus
+  focus_follows_mouse autofocus
   # mouse_follows_focus on
 
   mouse_modifier ctrl
@@ -89,8 +89,8 @@ yabai -m rule --add app="^Calendar$" title="(General|^$)" manage=off # Calendar.
 yabai -m rule --add app="^Mail" title="^Re.*" manage=off # Mail.app reply window
 yabai -m rule --add app="^Mail" title="^New Message" manage=off # Mail.app new message window
 yabai -m rule --add app="^Microsoft Word" title="^Open new and recent files" manage=off # Microsoft Word new file window
-yabai -m rule --add app="^Microsoft PowerPoint" title="^Open new and recent files" manage=off # Microsoft Word new file window
-yabai -m rule --add app="^Microsoft Excel" title="^Open new and recent files" manage=off # Microsoft Word new file window
+yabai -m rule --add app="^Microsoft PowerPoint" title="^Open new and recent files" manage=off # Microsoft PowerPoint new file window
+yabai -m rule --add app="^Microsoft Excel" title="^Open new and recent files" manage=off # Microsoft Excel new file window
 yabai -m rule --add title=".*Bitwarden.*" manage=off # Any mention of Bitwarden, including extension window in Firefox
 
 # Ghostty workaround for tabbed windows
