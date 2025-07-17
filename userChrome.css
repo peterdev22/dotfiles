@@ -56,6 +56,16 @@ Compatibility :
   --toolbar-field-focus-border-color: transparent !important;
 }
 
+/* Remove active tab shadow */
+#tabbrowser-tabs:not([noshadowfortests]) .tab-background:is([selected], [multiselected]) {
+  box-shadow: none !important;
+}
+
+.tab-background:is([selected], [multiselected]):-moz-lwtheme {
+  --lwt-tabs-border-color: rgba(0, 0, 0, 0.5) !important;
+  border-bottom-color: transparent !important;
+}
+
 /* Download Button Styles */
 .toolbarbutton-1 {
   fill: #46CCFD !important;
@@ -92,7 +102,7 @@ Compatibility :
 }
 
 #urlbar-container {
-  margin-top: 1px !important;
+  margin-top: 0px !important;
   margin-bottom: 2px !important;
   min-height: 45px !important;
 }
