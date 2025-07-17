@@ -20,12 +20,13 @@ Feel free to take inspiration from these and modify them to your liking - I've m
 This Firefox configuration converts the top tab and address bar into one so theres more space for the webpage.
 - Looks better if you remove your toolbar items
 - Does not work on Windows
+- Tabs will resize to fit the space, but it can get annoying with >10 tabs
 - Themes:
   - Firefox Color - Catppuccin Mocha: [Link](https://color.firefox.com/?theme=XQAAAAJJBAAAAAAAAABBqYhm849SCicxcUcPX38oKRicm6da8pFtMcajvXaAE3RJ0F_F447xQs-L1kFlGgDKq4IIvWciiy4upusW7OvXIRinrLrwLvjXB37kvhN5ElayHo02fx3o8RrDShIhRpNiQMOdww5V2sCMLAfedxuJKgKfYC0MgwphhfNqnG95yk9dbmoYTESCyaIPra1KFX29L9nLE5glNIsTm6faWK-3xbCKWAqSjZFO_VM9Wj_BYadsw2D1O60ylxFuTgUzlM3hW73I74s39LWAtaQcBMFUkmt-_Jj0QeC05EQAu-gaTkZE97kimAaYQiVW5Sqt9_GtXx3o-lg1164JYHZ9a-E2aGDmOLV6jVF4tFX-FFsc1MvLSUqqD-tWd_EUfqKap7GtNqx7wBhQDRqJqxWbRGcqxWBco0ZLIbQmlH_hli2TlnusOmkBgg9I_Bkyh6JsdNGHnTDgxnRr2lmwXKgr31f1qGwK9bRTJXmvTZFAayMxCSrkFMQmYNuz13yQbrWa610YWjML7YErRZua7-upk5E3uKlgt0bYUuQyuQrx-RpaGQQWpRM-sTZxPdipi-dzPXW2v_-3cxUg)
-  - Firefox Color - Black (image below): [Link](https://color.firefox.com/?theme=XQAAAALNAQAAAAAAAABBqYhm849SCia-yK6EGccwS-xMDPrv2Sw6Caq-qy5QgqeHG4K15H9ICig-sRkmwHSgkvNfRgb2eiAvUQOJakLbb3uF3IgUz-J1EU98VivSeSjHyhxtbiv__Eq4aMsHJWFQtL0d3qwZciJQvOorcFd30VaDzDXWOYPHZr2JnvMWcBoLCEZuU58rkkWK0revnEJm0PrBBezwaos3-X0WxCjXuSw_Z8RCaQxrnoPJSkHmESwD_4A4hQ2uWaRAywcMcFDeJyiqvdChxFUVN4epoV-O2bGHAI8Vru6CAfK8m7PrBmzyXUkhrU8d167M8e8pfgcgegfke61nABH29W75BweHn_ygo60)
+  - Firefox Color - Black (theme used in the image below): [Link](https://color.firefox.com/?theme=XQAAAALNAQAAAAAAAABBqYhm849SCia-yK6EGccwS-xMDPrv2Sw6Caq-qy5QgqeHG4K15H9ICig-sRkmwHSgkvNfRgb2eiAvUQOJakLbb3uF3IgUz-J1EU98VivSeSjHyhxtbiv__Eq4aMsHJWFQtL0d3qwZciJQvOorcFd30VaDzDXWOYPHZr2JnvMWcBoLCEZuU58rkkWK0revnEJm0PrBBezwaos3-X0WxCjXuSw_Z8RCaQxrnoPJSkHmESwD_4A4hQ2uWaRAywcMcFDeJyiqvdChxFUVN4epoV-O2bGHAI8Vru6CAfK8m7PrBmzyXUkhrU8d167M8e8pfgcgegfke61nABH29W75BweHn_ygo60)
   - Any theme from [Firefox add-ons](https://addons.mozilla.org/en-US/firefox/themes/) should work fine.
 
-![userchrome_example](https://storage.peterkni.com/shared/userchrome_example.png)
+<img width="1920" alt="userchrome_example" src="https://github.com/user-attachments/assets/0b65ee28-8a1b-4e37-832a-577c42b962ca" />
 
 &nbsp;
 
