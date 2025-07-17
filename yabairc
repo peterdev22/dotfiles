@@ -3,7 +3,7 @@
 
 # Layout
 LAYOUT_CONFIG=(
-  layout bsp # Binary Space Partitioning
+  layout bsp # Default to binary space partitioning
   window_placement second_child # New window spawns to the right if vertical split, or bottom if horizontal split
 )
 yabai -m config "${LAYOUT_CONFIG[@]}" # Apply layout
@@ -30,13 +30,13 @@ yabai -m config "${LAYOUT_CONFIG[@]}" # Apply layout
 
 # Mouse Support
 MOUSE_CONFIG=(
-  mouse_drop_action swap
-  focus_follows_mouse autofocus
+  # focus_follows_mouse autofocus
   # mouse_follows_focus on
-
-  mouse_modifier ctrl
-  mouse_action1 move
-  mouse_action2 resize
+  
+  mouse_drop_action swap
+  mouse_modifier fn
+  mouse_action1 resize
+  mouse_action2 move
 )
 yabai -m config "${MOUSE_CONFIG[@]}" # Apply mouse support
 
@@ -65,7 +65,7 @@ BORDER_CONFIG=(
 )
 yabai -m config "${BORDER_CONFIG[@]}" # Apply bordering
 
-# App Exceptions
+# Basic App Exceptions
 UNMANAGED=(
   System Settings
   Calculator
@@ -75,16 +75,16 @@ UNMANAGED=(
   Installer
   Archive Utility
   System Information
-  Bitwarden
   Finder
   Simulator
   QuickTime Player
+  Ghostty
 )
 for ((i = 1; i <= "${#UNMANAGED[@]}"; i++)); do
-	yabai -m rule --add app="^${UNMANAGED[(($i - 1))]}.*$" manage=off
+	yabai -m rule --add app="^${UNMANAGED[(($i - 1))]}.*$" manage=off # Unmanage apps based on their name
 done
 
-# Misc. Exceptions
+# Specific Exception Rules
 yabai -m rule --add app="^Calendar$" title="(General|^$)" manage=off # Calendar.app new event suggestion window
 yabai -m rule --add app="^Mail" title="^Re.*" manage=off # Mail.app reply window
 yabai -m rule --add app="^Mail" title="^New Message" manage=off # Mail.app new message window
@@ -92,8 +92,3 @@ yabai -m rule --add app="^Microsoft Word" title="^Open new and recent files" man
 yabai -m rule --add app="^Microsoft PowerPoint" title="^Open new and recent files" manage=off # Microsoft PowerPoint new file window
 yabai -m rule --add app="^Microsoft Excel" title="^Open new and recent files" manage=off # Microsoft Excel new file window
 yabai -m rule --add title=".*Bitwarden.*" manage=off # Any mention of Bitwarden, including extension window in Firefox
-
-# Ghostty workaround for tabbed windows
-# https://ghostty.org/docs/help/macos-tiling-wms
-yabai -m signal --add app='^Ghostty$' event=window_created action='yabai -m space --layout bsp'
-yabai -m signal --add app='^Ghostty$' event=window_destroyed action='yabai -m space --layout bsp'

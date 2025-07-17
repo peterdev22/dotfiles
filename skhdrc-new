@@ -1,0 +1,21 @@
+# skhd
+# Terminal commands that can be activiated via keyboard shortcuts
+
+# ----------- Yabai Window Management -----------
+
+# Window Movement
+ctrl + alt + cmd - s : yabai -m window --swap south # Swap down
+ctrl + alt + cmd - w : yabai -m window --swap north # Swap up
+ctrl + alt + cmd - a : yabai -m window --swap west # Swap left
+ctrl + alt + cmd - d : yabai -m window --swap east # Swap right
+
+ctrl + alt + cmd + shift - a : yabai -m window --display west # Move to left display
+ctrl + alt + cmd + shift - d : yabai -m window --display east # Move to right display
+
+# Window Layout
+ctrl + alt + cmd - f : yabai -m window --toggle zoom-fullscreen # Toggle fullscreen without it losing its spot in bsp
+
+# Switch Mode
+ctrl + alt + cmd - q : yabai -m query --spaces --space | grep -q '"type":"stack"' && yabai -m space --layout bsp || yabai -m space --layout stack # checks the current space's mode using grep and sets the opposite
+
+# ----------- End Yabai Window Management -----------
