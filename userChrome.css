@@ -42,12 +42,12 @@ Compatibility :
 }
 
 /* URL Bar Styles */
-#urlbar-background,
+.urlbar-background,
 #urlbar {
   border-radius: 12px !important;
 }
 
-#urlbar[focused="true"]>#urlbar-background,
+#urlbar[focused="true"]>.urlbar-background,
 #searchbar:focus-within {
   border-color: var(--lwt-toolbar-field-border-color, #ffffff00) !important;
 }

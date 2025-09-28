@@ -1,0 +1,135 @@
+/* 'Rounded' theme for firefox with vertical tabs
+
+Feel free to take parts of this and use it in your
+own config - the comments should make it easier to know what everything does.
+
+Compatibility :
+- Works on MacOS
+- Untested on Linux and windows systems (but should work).
+- Made for vertical tabs
+
+*/
+
+/* Change font and add border around website content */
+* {
+  font-family: 'SF Pro Display';
+  --content-area-shadow: 0 0 0 1px rgba(55, 55, 55, 0.8);
+}
+
+/* Change tab & urlbar height, also tab group height and border radius */
+:root {
+  --tab-min-height: 28px !important;
+  --urlbar-min-height: 32px !important;
+  --tab-group-label-height: 20px !important;
+  --tab-border-radius: calc(var(--tab-group-label-height) / 2) !important;
+  --tab-group-label-padding: 8px !important;
+}
+
+/* Tab corner radius */
+.tab-background,
+.tab-loading-burst {
+  border: none !important;
+  border-radius: calc(var(--tab-min-height) / 2) !important;
+}
+
+/* Tab close button border radius */
+.tabbrowser-tab .close-icon:hover {
+  border-radius: 100% !important;
+}
+
+/* Decrease spacing between vertical tabs */
+#vertical-tabs.customization-target #tabbrowser-tabs tab:not([pinned]) .tab-background {
+  margin-block: 0px !important;
+}
+
+/* Remove active tab shadow */
+#tabbrowser-tabs:not([noshadowfortests]) .tab-background:is([selected], [multiselected]) {
+  box-shadow: none !important;
+}
+
+.tab-background:is([selected], [multiselected]):-moz-lwtheme {
+  --lwt-tabs-border-color: rgba(0, 0, 0, 0.5) !important;
+  border-bottom-color: transparent !important;
+}
+
+/* URL Bar corner radius */
+.urlbar-background,
+#urlbar-input-container {
+  --toolbarbutton-border-radius: calc(var(--urlbar-min-height) / 2);
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+#urlbar-input-container {
+  --urlbar-icon-border-radius: calc(var(--toolbarbutton-border-radius) - 1px);
+}
+
+/* Remove some buttons */
+#back-button {
+  display: none !important;
+}
+
+#forward-button {
+  display: none !important;
+}
+
+#unified-extensions-button,
+#unified-extensions-button>.toolbarbutton-icon {
+  width: 0px !important;
+  padding: 0px !important;
+}
+
+/* Make buttons rounded */
+#tracking-protection-icon-container,
+#identity-box:is(.chromeUI)>.identity-box-button {
+  border-radius: calc(var(--urlbar-min-height) / 2) !important;
+}
+#star-button-box {
+  border-radius: calc(var(--urlbar-min-height) / 2) !important;
+}
+#identity-icon-box {
+  border-radius: calc(var(--urlbar-min-height) / 2) !important;
+}
+.button-background {
+  border-radius: calc(var(--tab-min-height) / 2) !important;
+}
+.toolbarbutton-badge-stack {
+  border-radius: calc(var(--urlbar-min-height) / 2) !important;
+}
+#tabs-newtab-button {
+  border-radius: calc(var(--tab-min-height) / 2) !important;
+}
+
+/* Make status panel look better (the thing that comes up on a url hover*/
+#statuspanel {
+  margin: 12px !important;
+}
+#statuspanel-label {
+  border: none !important;
+  border-radius: 12px !important;
+
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+
+  background-color: black !important;
+  outline: 1px solid !important;
+  outline-color: rgba(55, 55, 55, 1) !important;
+}
+
+/* Reduce distance between pinned and normal tabs when using vertical tabs */
+#vertical-pinned-tabs-splitter {
+  margin-bottom: -16px !important;
+}
+
+/* Compact tab group labels */
+.tab-group-label {
+  height: var(--tab-group-label-height) !important;
+  line-height: var(--tab-group-label-height) !important;
+}
+.tab-group-label-container {
+  padding: 0px !important;
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
+}
