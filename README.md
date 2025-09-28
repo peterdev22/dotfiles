@@ -26,7 +26,7 @@ This Firefox configuration converts the top tab and address bar into one so ther
   - Firefox Color - Black (theme used in the image below): [Link](https://color.firefox.com/?theme=XQAAAALNAQAAAAAAAABBqYhm849SCia-yK6EGccwS-xMDPrv2Sw6Caq-qy5QgqeHG4K15H9ICig-sRkmwHSgkvNfRgb2eiAvUQOJakLbb3uF3IgUz-J1EU98VivSeSjHyhxtbiv__Eq4aMsHJWFQtL0d3qwZciJQvOorcFd30VaDzDXWOYPHZr2JnvMWcBoLCEZuU58rkkWK0revnEJm0PrBBezwaos3-X0WxCjXuSw_Z8RCaQxrnoPJSkHmESwD_4A4hQ2uWaRAywcMcFDeJyiqvdChxFUVN4epoV-O2bGHAI8Vru6CAfK8m7PrBmzyXUkhrU8d167M8e8pfgcgegfke61nABH29W75BweHn_ygo60)
   - Any theme from [Firefox add-ons](https://addons.mozilla.org/en-US/firefox/themes/) should work fine.
 
-<img width="1920" alt="userchrome example" src="https://github.com/user-attachments/assets/0b65ee28-8a1b-4e37-832a-577c42b962ca" />
+<img width="4320" height="2784" alt="userchrome old example" src="https://github.com/user-attachments/assets/085ec31d-4c8e-4f32-828a-0e5e2c4e5290" />
 
 #### userChrome.css (NEW VERSION)
 My new userChrome is designed for vertical tabs and it also leans into more of a rounded look. This userChrome does not transform the urlbar so it is **a lot** more responsive to window resizing compared to my last userChrome.
