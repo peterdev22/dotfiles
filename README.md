@@ -1,10 +1,12 @@
-  # My .files
+# My .files
 This repository is supposed to be a backup of my (most important) configuration files just in case my computer dies.
 Feel free to take inspiration from these and modify them to your liking - I've made them easy to edit.
 
 ### Outline
 - **Theming**
   - userChrome
+    - userChrome.css
+    - userChrome-new.css  
   - simplebarrc
 - **Window Management**
   - yabairc
@@ -16,7 +18,9 @@ Feel free to take inspiration from these and modify them to your liking - I've m
 
 ## Theming
 
-#### userChrome.css
+### userChrome
+
+#### userChrome.css - Integrated tab/urlbar
 This Firefox configuration converts the top tab and address bar into one so theres more space for the webpage.
 - Looks better if you remove your toolbar items
 - Does not work on Windows
@@ -28,7 +32,7 @@ This Firefox configuration converts the top tab and address bar into one so ther
 
 <img width="4320" height="2784" alt="userchrome old example" src="https://github.com/user-attachments/assets/085ec31d-4c8e-4f32-828a-0e5e2c4e5290" />
 
-#### userChrome.css (NEW VERSION)
+#### userChrome-new.css - Rounded vertical tabs (NEW VERSION)
 My new userChrome is designed for vertical tabs and it also leans into more of a rounded look. This userChrome does not transform the urlbar so it is **a lot** more responsive to window resizing compared to my last userChrome.
 - Themes used:
   - [Adaptive Tab Bar Colour](https://github.com/easonwong-de/Adaptive-Tab-Bar-Colour) - works well with this. Makes Firefox recolour depending on the website (similar to Safari).
@@ -38,7 +42,7 @@ My new userChrome is designed for vertical tabs and it also leans into more of a
 
 &nbsp;
 
-#### simplebarrc
+### simplebarrc
 [simple-bar](https://github.com/Jean-Tinland/simple-bar) is a menu bar replacement that uses [Übersicht](https://github.com/felixhageloh/uebersicht). I've included a config file which you can put into your `~/.simplebarrc`. You can then get it into simple-bar by enabling the 'External config file' setting - a import button will appear and you can use that to import the config.
 
 **NOTE: Things will look weird before you add the custom theme.**
@@ -59,18 +63,18 @@ Now go to the themes tab in setting and select 'Peter Blue', and you're done!
 
 ## Window Management
 
-#### yabairc
+### yabairc
 I use [yabai](https://github.com/koekeishiya/yabai) for tiled window management on MacOS. My config file is nice and simple and can include padding but you can easily edit this file for yourself!
 
 &nbsp;
 
-#### skhdrc
+### skhdrc
 [skhd](https://github.com/koekeishiya/skhd) is used in conjunction with yabai to allow the keyboard to control window positioning (you're probably going to want to control via kb).
 My setup file uses the hyper key (`ctrl + alt + cmd`) for moving windows around. Two files are included in this repository (I use the `skhdrc-new` version now, but the old file is still included as a backup).
 
 **The controls are `ctrl + alt + cmd` and...**
 
-##### skhdrc - full setup
+#### skhdrc - full setup
 - `arrows` for swappping windows around
 - `j, k, h, l` for cutting windows around
 - `shift + left` or `right` for changing displays
@@ -79,7 +83,7 @@ My setup file uses the hyper key (`ctrl + alt + cmd`) for moving windows around.
 - `q, w, a, s` for switching focus
 - `z, x` for switching focus between displays
 
-##### skhdrc-new - simple, no focus controls, wasd movement
+#### skhdrc-new - simple, no focus controls, wasd movement
 - `w, a, s, d` for swappping windows around
 - `shift + a` or `d` for changing displays
 - `f` for fullscreen
