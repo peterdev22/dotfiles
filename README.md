@@ -34,6 +34,7 @@ This Firefox configuration converts the top tab and address bar into one so ther
 
 #### userChrome-new.css - Rounded vertical tabs (NEW VERSION)
 My new userChrome is designed for vertical tabs and it also leans into more of a rounded look. This userChrome does not transform the urlbar so it is **a lot** more responsive to window resizing compared to my last userChrome.
+- Works on Windows (just change the font to something you have installed)
 - Themes used:
   - [Adaptive Tab Bar Colour](https://github.com/easonwong-de/Adaptive-Tab-Bar-Colour) - works well with this. Makes Firefox recolour depending on the website (similar to Safari).
   - Firefox Color - Black (same one linked above).
