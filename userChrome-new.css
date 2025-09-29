@@ -4,9 +4,10 @@ Feel free to take parts of this and use it in your
 own config - the comments should make it easier to know what everything does.
 
 Compatibility :
-- Works on MacOS
-- Untested on Linux and windows systems (but should work).
-- Made for vertical tabs
+- Works on MacOS and Windows.
+- Remove the font change (line 16) if using this on Windows.
+- Untested on GNU/Linux systems (but should work).
+- Made for vertical tabs.
 
 */
 
