@@ -12,8 +12,9 @@ Compatibility :
 */
 
 /* Change font and add border around website content */
+/* Note: Set flag 'sidebar.revamp.round-content-area' to TRUE for a rounded website content border */
 * {
-  font-family: 'SF Pro Display';
+  font-family: 'SF Pro Display'; /* Font only preinstalled on Macs */
   --content-area-shadow: 0 0 0 1px rgba(55, 55, 55, 0.8);
 }
 
@@ -65,46 +66,64 @@ Compatibility :
   --urlbar-icon-border-radius: calc(var(--toolbarbutton-border-radius) - 1px);
 }
 
-/* Remove some buttons */
+/* Remove back button */
 #back-button {
   display: none !important;
 }
 
+/* Remove forward button */
 #forward-button {
   display: none !important;
 }
 
+/* Remove extensions folder button */
 #unified-extensions-button,
 #unified-extensions-button>.toolbarbutton-icon {
   width: 0px !important;
   padding: 0px !important;
 }
 
-/* Make buttons rounded */
+/* Rounded protections button mouseover */
 #tracking-protection-icon-container,
 #identity-box:is(.chromeUI)>.identity-box-button {
   border-radius: calc(var(--urlbar-min-height) / 2) !important;
 }
+
+/* Rounded favourite button mouseover */
 #star-button-box {
   border-radius: calc(var(--urlbar-min-height) / 2) !important;
 }
+
+/* Rounded site settings button mouseover */
 #identity-icon-box {
   border-radius: calc(var(--urlbar-min-height) / 2) !important;
 }
-.button-background {
-  border-radius: calc(var(--tab-min-height) / 2) !important;
-}
+
+/* Rounded view all tabs button mouseover */
 .toolbarbutton-badge-stack {
   border-radius: calc(var(--urlbar-min-height) / 2) !important;
 }
+
+/* Rounded page action buttons mouseover */
+.urlbar-page-action {
+  border-radius: calc(var(--urlbar-min-height) / 2) !important;
+}
+
+/* Rounded new tab button mouseover */
 #tabs-newtab-button {
   border-radius: calc(var(--tab-min-height) / 2) !important;
 }
 
-/* Make status panel look better (the thing that comes up on a url hover*/
+/* Rounded sidebar bottom buttons mouseover */
+.button-background {
+  border-radius: calc(--tab-min-height / 2) !important;
+}
+
+/* Rounded and spaced status bar (the popup in the bottom left when you mouseover a url) */
 #statuspanel {
   margin: 12px !important;
 }
+
 #statuspanel-label {
   border: none !important;
   border-radius: 12px !important;
@@ -119,16 +138,22 @@ Compatibility :
   outline-color: rgba(55, 55, 55, 1) !important;
 }
 
-/* Reduce distance between pinned and normal tabs when using vertical tabs */
-#vertical-pinned-tabs-splitter {
+/* Hide bottom left sidebar splitter on Windows */
+#sidebar-tools-and-extensions-splitter {
+  visibility: hidden !important;
+}
+
+/* Reduce distance between pinned and normal tabs when using vertical tabs (while sidebar is expanded) */
+#tabbrowser-tabs[expanded]>#vertical-pinned-tabs-splitter {
   margin-bottom: -16px !important;
 }
 
-/* Compact tab group labels */
+/* Compact and rounded tab group labels */
 .tab-group-label {
   height: var(--tab-group-label-height) !important;
   line-height: var(--tab-group-label-height) !important;
 }
+
 .tab-group-label-container {
   padding: 0px !important;
   margin-top: 4px !important;
