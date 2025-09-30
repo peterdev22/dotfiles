@@ -94,12 +94,17 @@ Compatibility :
   border-radius: calc(var(--urlbar-min-height) / 2) !important;
 }
 
-/* Rounded site settings button mouseover */
+/* Rounded site information button mouseover */
 #identity-icon-box {
   border-radius: calc(var(--urlbar-min-height) / 2) !important;
 }
 
-/* Rounded view all tabs button mouseover */
+/* Rounded site permissions button mouseover */
+#identity-permission-box {
+  border-radius: calc(var(--urlbar-min-height) / 2) !important;
+}
+
+/* Rounded extensions and various toolbar buttons mouseover */
 .toolbarbutton-badge-stack {
   border-radius: calc(var(--urlbar-min-height) / 2) !important;
 }
@@ -109,14 +114,32 @@ Compatibility :
   border-radius: calc(var(--urlbar-min-height) / 2) !important;
 }
 
+/* Rounded sidebar bottom buttons mouseover */
+.button-background {
+  border-radius: calc(var(--tab-min-height) / 2) !important;
+}
+
 /* Rounded new tab button mouseover */
 #tabs-newtab-button {
   border-radius: calc(var(--tab-min-height) / 2) !important;
 }
 
-/* Rounded sidebar bottom buttons mouseover */
-.button-background {
-  border-radius: calc(--tab-min-height / 2) !important;
+/* Rounded search engine switcher related buttons */
+#urlbar-searchmode-switcher {
+  border-radius: calc(var(--urlbar-min-height) / 2) !important;
+}
+.urlbar-revert-button {
+  border-radius: calc(var(--urlbar-min-height) / 2) !important;
+}
+
+/* Rounded switch to tab label */
+#urlbar-label-box {
+  border-radius: calc(var(--urlbar-min-height) / 2) !important;
+}
+
+/* Rounded url go button */
+#urlbar-go-button {
+  border-radius: calc(var(--urlbar-min-height) / 2) !important;
 }
 
 /* Rounded and spaced status bar (the popup in the bottom left when you mouseover a url) */
@@ -158,4 +181,34 @@ Compatibility :
   padding: 0px !important;
   margin-top: 4px !important;
   margin-bottom: 4px !important;
+}
+
+/* Increase URL bar item and background corner radius */
+.urlbarView-row {
+  border: none;
+  border-radius: 32px !important;
+}
+.urlbar-background {
+  border-radius: 20px !important;
+}
+
+/* Rounded URL bar action label (eg. Switch to tab) */
+.urlbarView-action {
+  border-radius: 32px !important;
+}
+
+/* Increase popup menu button mouseover corner radius */
+.subviewbutton {
+  border-radius: 10px !important;
+  padding: 6px !important;
+  padding-inline: 12px !important;
+}
+#appMenu-fxa-label2 {
+  padding: none !important;
+  margin-inline: 0px !important;
+}
+
+/* Increase popup menu corner radius */
+.panel-no-padding {
+  border-radius: 16px !important;
 }
