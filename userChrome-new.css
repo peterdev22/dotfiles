@@ -161,10 +161,10 @@ Compatibility :
   outline-color: rgba(55, 55, 55, 1) !important;
 }
 
-/* Hide bottom left sidebar splitter on Windows */
-#sidebar-tools-and-extensions-splitter {
+/* Hide bottom left sidebar splitter (removes its function though) */
+/* #sidebar-tools-and-extensions-splitter {
   visibility: hidden !important;
-}
+} */
 
 /* Reduce distance between pinned and normal tabs when using vertical tabs (while sidebar is expanded) */
 #tabbrowser-tabs[expanded]>#vertical-pinned-tabs-splitter {
@@ -188,6 +188,11 @@ Compatibility :
   border: none;
   border-radius: 32px !important;
 }
+
+#urlbar-results {
+  padding-bottom: 4px !important;
+}
+
 .urlbar-background {
   border-radius: 20px !important;
 }
@@ -198,7 +203,7 @@ Compatibility :
 }
 
 /* Increase popup menu button mouseover corner radius */
-.subviewbutton {
+/* .subviewbutton {
   border-radius: 10px !important;
   padding: 6px !important;
   padding-inline: 12px !important;
@@ -206,9 +211,9 @@ Compatibility :
 #appMenu-fxa-label2 {
   padding: none !important;
   margin-inline: 0px !important;
-}
+} */
 
-/* Increase popup menu corner radius */
-.panel-no-padding {
+/* Increase popup menu corner radius (only works on macs) */
+/* .panel-no-padding {
   border-radius: 16px !important;
-}
+} */
