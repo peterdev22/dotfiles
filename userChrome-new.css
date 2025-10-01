@@ -5,7 +5,7 @@ own config - the comments should make it easier to know what everything does.
 
 Compatibility :
 - Works on MacOS and Windows.
-- Remove the font change (line 22) if using this on Windows.
+- Remove the font change (line 20) if using this on Windows.
 - Untested on GNU/Linux systems (but should work).
 - Made for vertical tabs.
 
