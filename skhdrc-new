@@ -14,6 +14,7 @@ ctrl + alt + cmd + shift - d : yabai -m window --display east # Move to right di
 
 # Window Layout
 ctrl + alt + cmd - f : yabai -m window --toggle zoom-fullscreen # Toggle fullscreen without it losing its spot in bsp
+ctrl + alt + cmd - t : yabai -m window --toggle float --grid 4:4:1:1:2:2 # Detach window
 
 # Switch Mode
 ctrl + alt + cmd - q : yabai -m query --spaces --space | grep -q '"type":"stack"' && yabai -m space --layout bsp || yabai -m space --layout stack # checks the current space's mode using grep and sets the opposite

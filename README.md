@@ -79,7 +79,7 @@ My setup file uses the hyper key (`ctrl + alt + cmd`) for moving windows around.
 - `arrows` for swappping windows around
 - `j, k, h, l` for cutting windows around
 - `shift + left` or `right` for changing displays
-- `t` to toggle tile for a window
+- `t` to detach window from yabai management
 - `f` for fullscreen
 - `q, w, a, s` for switching focus
 - `z, x` for switching focus between displays
@@ -87,5 +87,6 @@ My setup file uses the hyper key (`ctrl + alt + cmd`) for moving windows around.
 #### skhdrc-new - simple, no focus controls, wasd movement
 - `w, a, s, d` for swappping windows around
 - `shift + a` or `d` for changing displays
+- `t` to detach window from yabai management
 - `f` for fullscreen
 - `q` for switching modes between bsp and stack
